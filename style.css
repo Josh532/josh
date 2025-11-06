@@ -1,0 +1,431 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+nav{
+    width: 100%;
+    height: 250px;
+    background-color: rgba(204, 204, 204, 0);
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+nav li a{
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 25px;
+}
+
+ nav li{
+    display: inline-block;
+ }
+
+ ul{
+    display: inline-block;
+    list-style-type:none;
+}
+
+#name{
+    display: inline-block;
+    font-size: 45px;
+    color: black;
+}
+
+.off-screen-menu{
+    background-color: rgb(59, 59, 59);
+    height: auto;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.off-screen-menu.active{
+    right: 0;
+}
+
+.hamburger{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    display: none;
+    margin-left: 50px;
+}
+
+.hamburger span{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    border: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: .3s ease;
+}
+
+.hamburger span:nth-child(1){
+    top: 25%;
+}
+
+.hamburger span:nth-child(3){
+    top: 75%;
+}
+
+.hamburger.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%)rotate(-45deg);
+}
+
+
+
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.wrapper{
+    width: 100%;
+    justify-content: space-around;
+    background-color: transparent;
+    display: flex;
+    margin-top: 150px;
+}
+
+.left{
+    width: 35%;
+    position: relative;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.right{
+    width: 35%;
+    position: relative;
+    font-size: 20px;
+}
+
+#profile_picture{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    transition: 1.5s;
+}
+
+#text{
+    font-size: 32px;
+}
+
+.right li{
+    display: block;
+    list-style-type:square;
+}
+
+#button{
+    background-color: black;
+        border: none;
+        border-radius: 1px;
+        display: flex;
+        margin: 50px;
+        width: 250px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+
+}
+
+#button a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+#veiw{
+        background-color: black;
+        border: none;
+        border-radius: 1px;
+        display: flex;
+        margin: 50px;
+        width: 250px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family:sans-serif;
+        font-size: 28px;
+        transition: 0.3s;
+        border-radius: 3px;
+}
+
+#veiw:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+
+#portfolio_picture{
+    width: 100%;
+}
+
+#profile_picture2{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    transition: 1.5s;
+}
+
+#p_img{
+    width: 100%;
+    height: auto;
+}
+
+.main{
+    justify-content: center;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#p_img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.container{
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.left_container{
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+       flex-shrink: 0;
+}
+
+.right_container{
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.inter_container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#info{
+    width: 100%;
+}
+
+#container_title{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+#container_subheading{
+    text-align: center;
+}
+
+.socials{
+    display:flex;
+    margin-top: 50px;
+}
+
+.socials a{
+    color: black;
+    font-size: 28px;
+    margin: 10px;
+}
+
+
+@media(max-width:768px){
+     .left_container,
+    .right_container {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    #container_title {
+        font-size: 32px; 
+    }
+
+#veiw{
+        background-color: black;
+        border: none;
+        border-radius: 1px;
+        display: flex;
+        width: 250px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+        color: white;
+        font-family:sans-serif;
+        font-size: 28px;
+        transition: 0.3s;
+
+}
+
+}
+
+
+#contact_title{
+    margin: 35px;
+    font-size: 50px;
+}
+
+#emoji{
+    margin-left: 5px;
+}
+
+.contact_container li {
+    font-size: 35px;
+}
+
+#contact_profile{
+width:100%;
+}
+
+
+
+
+
+
+
+
+#portfolio{
+   width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-top: 50px;
+}
+
+#T_P{
+    font-size: 58px;
+}
+
+#para{
+    font-size: 26px;
+}
+
+
+
+.lan{
+    font-size: 38px;
+}
+
+#html{
+    color: orange;
+}
+
+#css{
+    color: blue;
+}
+
+#php{
+    color: rgb(28, 0, 128);
+}
+
+#js{
+    color: rgb(194, 194, 61);
+}
+
+@media only screen and (max-width: 1070px){
+  nav li a{
+        font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 1007px){
+    nav li a{
+        margin: 10px;
+    }
+
+    #name{
+        width: 50%;
+        margin-left: -50px;
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    nav ul{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 750px){
+
+    .wrapper{
+        display: inline-block;
+        
+        
+    }
+
+.wrapper {
+        display: inline-block;
+    }
+
+    .right {
+        width: 80%;
+        margin: 15px;
+    }
+
+    .left {
+        display: inline-block;
+        width: 80%;
+        margin: 15px;
+        font-size: 18px;
+    }
+
+    
+}
